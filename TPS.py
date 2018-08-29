@@ -25,15 +25,24 @@ xant=0
 yant=0
 dis=1
 vel=1
+
+inicio = [975, 310]
+line_type = 8
+
 while(video.isOpened()):
     width = video.get(cv2.CAP_PROP_FRAME_WIDTH)
     height = video.get(cv2.CAP_PROP_FRAME_HEIGHT)
     pixels=width*height
     t=1/FPS1
     t=t/3600
-    
     fps = video.get(cv2.CAP_PROP_FPS)
     ret, frame = video.read()
+    pos = np.array([inicio, 
+                   [inicio[0] + 60, inicio[1]],
+                   [inicio[0] - 180 , inicio[1] + 770], 
+                   [inicio[0] - 760, inicio[1] + 770]], 
+                   np.int32)                           #Coordenadas de la zona de interés
+    cv2.fillPoly(frame, [pos], (0, 0, 0), line_type)   #Coloreado zona de interés 1
     if(back==1):
         gris = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         gris = cv2.GaussianBlur(gris, (21, 21), 0)
