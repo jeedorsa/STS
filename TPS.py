@@ -87,6 +87,14 @@ while(video.isOpened()):
         start_time = time.time()
     if cv2.waitKey(1) == ord('q'):
         break
+    if cv2.waitKey(1) == ord('p'):
+        u=1
+        time.sleep(3)
+        while(u==1):
+            u=1
+            if cv2.waitKey(1) == ord('p'):
+                u=2
+    
     #time.sleep(0.5)
 video.release()
 cv2.destroyAllWindows()
