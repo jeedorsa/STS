@@ -3,14 +3,10 @@ speed tracking system
 Link.
 
 ## Tareas Pendientes Luis-Jesus
-
-MoG o algoritmo para segmentar la grua y eliminarla.
-
-Contar los elementos que estan apareciendo, guardar posición en una tupla e identificarlos
-
-Contar cuantos elementos entran a la banda negra identificada y tomar el tiempo que demoran en transitarla
-
-
+Busqueda de algoritmos
+Implementar la red Deep Learning para reconocer los objetos y hacer el tracking de velocidad. (implementarlo)-Datasets
+Modificar el algoritmo para detectar el sentido
+Hacer implementacion multicamaras
 Video 1
 
 https://drive.google.com/open?id=10LlTQIjxCFWs0XbyzNsnMJ8TxlnmxqjW
