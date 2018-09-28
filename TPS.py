@@ -67,13 +67,18 @@ while(video.isOpened()):
         vel=dis/t
         vel=vel/10000
         yant=y
-        if (ll==1):
-            if(jj==1):
-                x1=x
-                x2=y
-                jj=2
-            cv2.putText(frame,str(vel),(x,y), 1, 1,(0,255,0),2,cv2.LINE_AA)
-            ll=2
+        x1=x
+        x2=y
+        jj=2
+        cv2.putText(frame,str(vel),(x,y), 1, 1,(0,255,0),2,cv2.LINE_AA)
+        ll=2
+        #if (ll==1):
+        #    if(jj==1):
+        #        x1=x
+        #        x2=y
+        #        jj=2
+        #    cv2.putText(frame,str(vel),(x,y), 1, 1,(0,255,0),2,cv2.LINE_AA)
+        #    ll=2
             
             #x2=x2+0.2
     frame_expanded = np.expand_dims(frame, axis=0)
